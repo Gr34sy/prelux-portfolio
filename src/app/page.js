@@ -4,11 +4,11 @@ import styles from "../styles/scss/pages/homepage.module.scss";
 export default function Home() {
   return (
     <main className={styles.homepage}>
-      <div className="homepage__header">
-        O mnie
+      <div className={styles.homepage__header}>
+        <h1 className={styles.homepage__header_h1}>O Mnie </h1>
       </div>
 
-      <div className="homepage__about-me">
+      <div className={styles.homepage__about}>
         Me
       </div>
     </main>
