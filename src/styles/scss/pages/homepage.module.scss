@@ -16,15 +16,16 @@
 
     background-position: center bottom;
     background-size: cover;
-    background-image: url('../../../assets/images/bg-homepage-header.png') ;
+    background-image: url('../../../assets/images/bg-homepage-header.png');
 }
 .homepage__header_h1{
     font-size: 4rem;
     font-family: $font-headers;
+    font-weight: 400;
 
     text-transform: capitalize;
     -webkit-text-stroke-color: $color-black;
-    -webkit-text-stroke-width: 0.0625rem;
+    -webkit-text-stroke-width: 0.125rem;
 }
 
 .homepage__about{
