@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/Navbar";
-import "../styles/main.scss";
+import "../styles/css/reset.css";
 
 export const metadata = {
   title: "Prelux Portfolio",
