@@ -1,7 +1,5 @@
 @import '../misc/variables.scss';
 
-$homepage-padding-inline: 10rem;
-
 .homepage{
     max-height: 100dvh;
     background-color: $color-white;
@@ -25,6 +23,7 @@ $homepage-padding-inline: 10rem;
 }
 .homepage__header_h1{
     @include font-coolvetica;
+    position: relative;
 
     font-size: 4rem;
     font-weight: 400;
@@ -34,11 +33,24 @@ $homepage-padding-inline: 10rem;
     -webkit-text-stroke-width: 0.125rem;
     letter-spacing: 0.125rem;
 }
+.homepage__header_h1::before{
+    content: '';
+    width: 20px;
+    height: 60px;
+    position: absolute;
+    bottom: -16px;
+    left: -60px;
+
+    background-image: url('../../../assets/images/homepage-header-decoration.png');
+}
 
 .homepage__about{
     @include font-coolvetica;
 
-    padding: 5rem $homepage-padding-inline;
+    padding: 5rem 18rem;
+
+    text-align: center;
+    line-height: 1.3em;
 
     background-position: bottom center;
     background-size: cover;
