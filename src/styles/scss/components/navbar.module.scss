@@ -1,3 +1,53 @@
+@import '../misc/variables.scss';
+
+$nav-link-padding: 1.5rem; 
+
 .navbar{
+    @include font-coolvetica;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+
     background-image: url('../../../assets/images/bg-navbar.png');
+}
+
+.navbar__logo{
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+
+    display: flex;
+    align-items: center;
+    gap: 2.2rem;
+
+    padding: $nav-link-padding;
+}
+
+.navbar__list{
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    
+    li{
+        padding-block: $nav-link-padding; 
+    }
+}
+.navbar__list_link{
+    font-size: 1.1rem;
+    padding: 0.5rem;
+
+    border: 2px solid $color-white;
+
+    transition: 1.2s;
+
+    &:hover{
+        color: $color-black;
+        background-color:  $color-white;
+    }
+}
+.navbar__list_icons{
+    padding: $nav-link-padding; 
+}
+.navbar__list_icon{
+
 }

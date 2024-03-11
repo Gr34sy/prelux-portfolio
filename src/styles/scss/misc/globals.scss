@@ -22,3 +22,8 @@ body {
   display: grid;
   grid-template-rows: auto 1fr;
 }
+
+a{
+  color: $color-white;
+  text-decoration: none;
+}
