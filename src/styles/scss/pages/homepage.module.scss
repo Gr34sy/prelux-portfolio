@@ -5,7 +5,7 @@
     background-color: $color-white;
 
     display: grid;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 2fr 5fr;
     gap: 1rem;
 }
 
@@ -35,12 +35,13 @@
 }
 .homepage__header_h1::before{
     content: '';
-    width: 20px;
-    height: 60px;
+    width: 15px;
+    height: 45px;
     position: absolute;
-    bottom: -16px;
-    left: -60px;
+    bottom: -17px;
+    left: -45px;
 
+    background-repeat: no-repeat;
     background-image: url('../../../assets/images/homepage-header-decoration.png');
 }
 
