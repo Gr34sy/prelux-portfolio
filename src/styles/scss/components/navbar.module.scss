@@ -1,15 +1,21 @@
 @import '../misc/variables.scss';
 
-$nav-link-padding: 1.5rem; 
+$nav-link-padding: 1.5rem;
+$nav-link-mobile-padding: 0.7rem; 
 
 .navbar{
     @include font-coolvetica;
 
     display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-
+    gap: 0.6rem;
+    padding: $nav-link-mobile-padding;
     background-image: url('../../../assets/images/bg-navbar.png');
+
+    @media(min-width: 825px){
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        padding: $nav-link-padding;
+    }
 }
 
 .navbar__logo{
@@ -19,18 +25,26 @@ $nav-link-padding: 1.5rem;
     display: flex;
     align-items: center;
     gap: 2.2rem;
-
-    padding: $nav-link-padding;
 }
 
 .navbar__list{
     display: flex;
-    gap: 1.2rem;
+    gap: 0.6rem 1rem;
     align-items: center;
+    flex-wrap: wrap;
     
     li{
-        padding-block: $nav-link-padding; 
+        padding-block: $nav-link-mobile-padding; 
+
+        @media(min-width: 825px) {
+            padding-block: $nav-link-padding; 
+        }
     }
+
+    @media(max-width: 410px){
+        justify-content: center;
+    }
+
 }
 .navbar__list_link{
     font-size: 1.1rem;
@@ -50,7 +64,11 @@ $nav-link-padding: 1.5rem;
     align-items: center;
     gap: 1rem;
 
-    padding: $nav-link-padding; 
+    padding: $nav-link-mobile-padding; 
+    
+    @media(min-width: 825px) {
+        padding: $nav-link-padding; 
+    }
 }
 .navbar__list_icon{
     font-size: 1.5rem;
