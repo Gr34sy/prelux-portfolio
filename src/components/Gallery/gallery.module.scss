@@ -1,0 +1,7 @@
+@import '../../styles/scss/misc/variables.scss';
+
+.gallery{
+    min-height: 100vh;
+    display: grid;
+    background-image: url('../../assets/images/bg-homepage-about.png');
+}
