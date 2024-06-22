@@ -6,6 +6,7 @@ const Gallery = () => {
   return (
     <div className={styles.gallery}>
       <div className={styles.grid}>
+        
       </div>
     </div>
   )
