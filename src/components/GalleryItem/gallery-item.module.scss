@@ -1,5 +1,92 @@
 @import '../../styles/scss/misc/variables.scss';
 
 .item{
-    
+    position: relative;
+    width: 100%;
+    height: 300px;
+
+    img{
+        padding: 8px;
+    }
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    &::after{
+        content: '';
+        transition: .4s ease-in-out;
+        inset: 0;
+        margin: 8px;
+        display: block;
+        position: absolute;
+        z-index: 1;
+    }
+
+    &:hover::after{
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+// item sizes
+.s-1{
+    grid-column: span 1;
+}
+
+.s-2{
+    grid-column: span 2;
+}
+
+
+// img decorations
+$border-length: 20px;
+$border-color: white;
+$border-width: 2px;
+.top-left{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: $border-length;
+    height: $border-length;
+    border-left: $border-width solid $border-color;
+    border-top: $border-width solid $border-color;
+}
+.bottom-right{
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: $border-length;
+    height: $border-length;
+    border-right: $border-width solid $border-color;
+    border-bottom: $border-width solid $border-color;
+}
+.top-right{
+    transition: .5s ease-in-out;
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: $border-length;
+    height: $border-length;
+    border-right: $border-width solid transparent;
+    border-top: $border-width solid transparent;
+}
+.bottom-left{
+    transition: .5s ease-in-out;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: $border-length;
+    height: $border-length;
+    border-left: $border-width solid transparent;
+    border-bottom: $border-width solid transparent;
+}
+
+.item:hover .top-right{
+    border-color: $border-color;
+    border-color: $border-color;
+}
+.item:hover .bottom-left{
+    border-color: $border-color;
+    border-color: $border-color;
 }

@@ -1,11 +1,32 @@
 @import '../../styles/scss/misc/variables.scss';
 
+@mixin width{
+    width: min(100% - 4rem, 1610px);
+    margin-inline: auto;
+}
+
 .gallery{
+    font-family: 'Coolvetica', sans-serif;
+    letter-spacing: 0.1rem;
     min-height: 100vh;
     display: grid;
+    align-content: start;
+    gap: 3.5rem;
     background-image: url('../../assets/images/bg-homepage-about.png');
+    padding-block: 4rem;
+}
+
+.title{
+    @include width;
+
+    font-size: 2rem;
+    font-weight: 300;
 }
 
 .grid{
+    @include width;
+
     display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 2rem;
 }
