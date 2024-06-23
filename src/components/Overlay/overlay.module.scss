@@ -1,0 +1,12 @@
+@import '../../styles/scss/misc/variables.scss';
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    display: none;
+    background-color: $semitransparent-black;
+}
+
+.overlay.active{
+    display: grid;
+}

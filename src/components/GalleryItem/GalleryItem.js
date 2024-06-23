@@ -4,9 +4,16 @@ import styles from './gallery-item.module.scss';
 import Image from 'next/image';
 
 
-const GalleryItem = ({image, size}) => {
+const GalleryItem = ({image, images, size, action}) => {
+
+  function handleClick(){
+    if(typeof action === 'function'){
+      action(image);
+    }
+  }
+
   return (
-    <div className={`${styles.item} ${styles[`s-${size}`]}`}>
+    <div className={`${styles.item} ${styles[`s-${size}`]}`} onClick={handleClick}>
       <Image src={image} alt="Art" fill/>
       <div className={styles['top-left']}/>
       <div className={styles['top-right']}/>
