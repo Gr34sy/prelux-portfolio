@@ -8,7 +8,7 @@ const GalleryItem = ({image, images, size, action}) => {
 
   function handleClick(){
     if(typeof action === 'function'){
-      action(image);
+      action([image]);
     }
   }
 

@@ -1,15 +1,20 @@
-import React from 'react';
+import React from "react";
 
-import styles from './overlay.module.scss';
+import styles from "./overlay.module.scss";
+import Image from "next/image";
 
-const Overlay = ({images}) => {
+const Overlay = ({ images }) => {
   return (
-    <div className={images != false ? `${styles.overlay} ${styles.active}` : `${styles.overlay}` }>
-      <div>
+    <>
+      {images != false && (
+        <div className={styles.overlay}>
+          <div className={styles.container}>
+            <Image src={images[0]} alt="Image" fill/>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
 
-      </div>
-    </div>
-  )
-}
-
-export default Overlay
+export default Overlay;

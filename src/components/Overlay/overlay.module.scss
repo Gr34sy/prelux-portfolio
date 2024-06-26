@@ -3,10 +3,15 @@
 .overlay{
     position: absolute;
     inset: 0;
-    display: none;
+    display: grid;
     background-color: $semitransparent-black;
+    padding-top: 100px;
+    align-items: start;
+    justify-items: center;
+    z-index: 10;
 }
 
-.overlay.active{
-    display: grid;
+.container{
+    position: relative;
+    padding: 4rem;
 }
