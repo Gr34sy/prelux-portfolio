@@ -13,32 +13,36 @@ import Overlay from "@/components/Overlay/Overlay";
 const Gallery = () => {
   const [overlayImages, setOverlayImages] = useState([]);
 
-  function setOverlay(images){
-      setOverlayImages([...images]);
+  function showOverlay(images){
+    setOverlayImages([...images]);
   }
+  function hideOverlay(){
+    setOverlayImages([]);
+  }
+
 
 
   return (
     <div className={styles.gallery}>
       <h1 className={styles.title}>My artworks</h1>
       <div className={styles.grid}>
-        <GalleryItem image={sutryk} size={2} action={setOverlay} />
-        <GalleryItem image={rybka} size={1} action={setOverlay} />
-        <GalleryItem image={polanski} size={2} action={setOverlay} />
-        <GalleryItem image={sutryk} size={1} action={setOverlay} />
-        <GalleryItem image={polanski} size={2} action={setOverlay} />
-        <GalleryItem image={rybka} size={1} action={setOverlay} />
-        <GalleryItem image={polanski} size={1} action={setOverlay} />
-        <GalleryItem image={rybka} size={1} action={setOverlay} />
-        <GalleryItem image={sutryk} size={2} action={setOverlay} />
-        <GalleryItem image={rybka} size={1} action={setOverlay} />
-        <GalleryItem image={sutryk} size={2} action={setOverlay} />
-        <GalleryItem image={sutryk} size={2} action={setOverlay} />
-        <GalleryItem image={polanski} size={2} action={setOverlay} />
-        <GalleryItem image={sutryk} size={2} action={setOverlay} />
-        <GalleryItem image={rybka} size={1} action={setOverlay} />
+        <GalleryItem image={sutryk} size={2} action={showOverlay} />
+        <GalleryItem image={rybka} size={1} action={showOverlay} />
+        <GalleryItem image={polanski} size={2} action={showOverlay} />
+        <GalleryItem image={sutryk} size={1} action={showOverlay} />
+        <GalleryItem image={polanski} size={2} action={showOverlay} />
+        <GalleryItem image={rybka} size={1} action={showOverlay} />
+        <GalleryItem image={polanski} size={1} action={showOverlay} />
+        <GalleryItem image={rybka} size={1} action={showOverlay} />
+        <GalleryItem image={sutryk} size={2} action={showOverlay} />
+        <GalleryItem image={rybka} size={1} action={showOverlay} />
+        <GalleryItem image={sutryk} size={2} action={showOverlay} />
+        <GalleryItem image={sutryk} size={2} action={showOverlay} />
+        <GalleryItem image={polanski} size={2} action={showOverlay} />
+        <GalleryItem image={sutryk} size={2} action={showOverlay} />
+        <GalleryItem image={rybka} size={1} action={showOverlay} />
       </div>
-      <Overlay images={overlayImages}/>
+      <Overlay images={overlayImages} hide={hideOverlay}/>
     </div>
   );
 };
