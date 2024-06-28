@@ -13,7 +13,12 @@
 .container{
     position: relative;
     padding: 4rem;
-
+}
+.container-vertical{
+    width: 500px;
+    height: 700px;
+}
+.container-horizontal{
     width: 1025px;
     height: 600px;
 }
