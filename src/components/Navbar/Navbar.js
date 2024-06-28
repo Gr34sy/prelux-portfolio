@@ -13,6 +13,7 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SocialLinks from '../SocialLinks/SocialLinks';
 
 export function Navbar() {
 
@@ -37,19 +38,7 @@ export function Navbar() {
         </li>
 
 
-        <li className={styles.navbar__list_icons}>
-          <a href="https://www.instagram.com/prelux.art/" className={styles.navbar__list_icon} target="_blank">
-            <FontAwesomeIcon icon={faInstagram}/>
-          </a>
-
-          <a href="https://www.youtube.com/@prelux8186" className={styles.navbar__list_icon} target="_blank">
-            <FontAwesomeIcon icon={faYoutube}/>
-          </a>
-
-          <a href="https://www.artstation.com/prelux" className={styles.navbar__list_icon} target="_blank">
-            <FontAwesomeIcon icon={faArtstation}/>
-          </a>
-        </li>
+        <SocialLinks />
       </ul>
     </nav>
   );

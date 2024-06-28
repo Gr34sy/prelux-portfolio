@@ -1,0 +1,15 @@
+@import '../../styles/scss/misc/variables.scss';
+
+.list{
+    display: flex;
+
+    a{
+        padding: 0.6rem;
+    }
+
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+}

@@ -1,6 +1,64 @@
-@import '../../styles/scss/misc/variables.scss';
+@import "../../styles/scss/misc/variables.scss";
 
-.contact{
-    background-image: url('../../assets/images/bg-homepage-about.png');
-    display: grid;
+@mixin links {
+  display: grid;
+  gap: 0.7rem;
+  color: $color-silver;
+  font-size: 0.8rem;
+  font-weight: 500;
+
+  a {
+    font-size: 1.1rem;
+  }
+
+  p {
+    border-bottom: 1px solid $color-white;
+  }
+}
+
+.contact {
+  @include font-coolvetica;
+  background-image: url("../../assets/images/bg-homepage-about.png");
+  display: grid;
+  padding-top: 8rem;
+  align-items: start;
+  justify-items: center;
+}
+
+.container {
+  padding: 2.5rem;
+  background-color: $color-dark-grey;
+  display: grid;
+  align-items: center;
+  gap: 1.2rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: auto 1fr;
+  }
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid $color-white;
+}
+
+.contact-details {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.email,
+.phone,
+.socials {
+  @include links;
+}
+
+.socials {
+  ul {
+    a:first-child {
+      padding-left: 0;
+    }
+  }
 }
