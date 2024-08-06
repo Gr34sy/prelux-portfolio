@@ -31,11 +31,23 @@
 
 // item sizes
 .s-1 {
-  grid-column: span 1;
-}
+  @media (max-width: 700px) {
+    height: 350px;
+    width: min(100%, 250px);
+  }
 
+  @media (min-width: 701px) {
+    grid-column: span 1;
+  }
+}
 .s-2 {
-  grid-column: span 2;
+  @media (max-width: 701px) {
+    height: 250px;
+    width: min(100%, 450px);
+  }
+  @media (min-width: 700px) {
+    grid-column: span 2;
+  }
 }
 
 // img decorations
