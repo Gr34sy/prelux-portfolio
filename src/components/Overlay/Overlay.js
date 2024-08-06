@@ -18,10 +18,18 @@ const Overlay = ({ images, hide }) => {
     <>
       {images != false && (
         <div className={styles.overlay}>
+          <FontAwesomeIcon
+            icon={faXmark}
+            className={styles.xMark}
+            onClick={handleHide}
+          />
           <div
-            className={`${styles.container} ${images[0].height > images[0].width ? styles["container-vertical"] : styles["container-horizontal"]}`}
+            className={`${styles.container} ${
+              images[0].height > images[0].width
+                ? styles["container-vertical"]
+                : styles["container-horizontal"]
+            }`}
           >
-            <FontAwesomeIcon icon={faXmark} className={styles.xMark} onClick={handleHide}/>
             <Image src={images[0]} alt="Image" fill />
           </div>
         </div>

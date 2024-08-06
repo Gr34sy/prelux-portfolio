@@ -1,38 +1,74 @@
-@import '../../styles/scss/misc/variables.scss';
+@import "../../styles/scss/misc/variables.scss";
 
-.overlay{
-    position: fixed;
-    inset: 0;
-    display: grid;
-    background-color: $semitransparent-black;
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  grid-template-rows: auto 1fr;
+  background-color: $semitransparent-black;
+  justify-items: center;
+  z-index: 10;
+
+  @media (min-width: 650px) {
     align-items: center;
-    justify-items: center;
-    z-index: 10;
+  }
 }
 
-.container{
-    position: relative;
-    padding: 4rem;
+.container {
+  position: relative;
 }
-.container-vertical{
-    width: 500px;
+
+.container-vertical {
+  height: 400px;
+  width: min(100% - 0.5rem, 300px);
+
+  @media (min-width: 400px) {
+    height: 450px;
+  }
+
+  @media (min-width: 600px) {
+    height: 650px;
+    width: min(100% - 0.5rem, 500px);
+  }
+
+  @media (min-width: 1050px) {
     height: 700px;
+  }
 }
-.container-horizontal{
-    width: 1025px;
+.container-horizontal {
+  width: min(100% - 2rem, 1400px);
+  height: 250px;
+
+  @media (min-width: 500px) {
+    height: 300px;
+  }
+
+  @media (min-width: 650px) {
     height: 600px;
+  }
+
+  @media (min-width: 1050px) {
+    height: 700px;
+  }
+
+  @media (min-width: 1650px) {
+    height: 800px;
+  }
 }
 
-.xMark{
-    position: absolute;
-    top: -35px;
-    right: -35px;
+.xMark {
+  align-self: start;
+  justify-self: end;
+  z-index: 2;
+  width: 45px;
+  height: 45px;
+  padding: 5px;
+  color: $color-white;
+  background-color: $color-black;
 
-    width: 35px;
-    height: 35px;
-    color: $color-white;
-
-    &:hover{
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 }

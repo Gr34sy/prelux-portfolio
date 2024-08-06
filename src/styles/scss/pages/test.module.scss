@@ -1,0 +1,12 @@
+@import "../misc/variables.scss";
+
+.layout {
+  width: min(100% - 2rem, 1800px);
+  margin-inline: auto;
+  position: relative;
+  height: 300px;
+
+  @media (min-width: 500px) {
+    height: 600px;
+  }
+}
