@@ -90,6 +90,9 @@ const Gallery = () => {
         <GalleryItem image={nacukrowany} size={2} action={showOverlay} />
         <GalleryItem image={zvz} size={1} action={showOverlay} />
         <GalleryItem image={zycie} size={1} action={showOverlay} />
+
+        <GalleryItem image={bagnoType} size={1} action={showOverlay} />
+        <GalleryItem image={choinka} size={1} action={showOverlay} />
       </div>
       <Overlay images={overlayImages} hide={hideOverlay} />
     </div>

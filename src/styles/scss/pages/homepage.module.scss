@@ -1,70 +1,70 @@
-@import '../misc/variables.scss';
+@import "../misc/variables.scss";
 
-.homepage{
-    background-color: $color-white;
+.homepage {
+  background-color: $color-white;
 
-    display: grid;
-    gap: 1rem;
-
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: auto 1fr;
 }
 
-.homepage__header{
-    min-height: 200px;
+.homepage__header {
+  min-height: 200px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 
-    background-position: bottom center ;
-    background-size: cover;
-    background-image: url('../../../assets/images/bg-homepage-header.png');
+  background-position: bottom center;
+  background-size: cover;
+  background-image: url("../../../assets/images/bg-homepage-header.png");
 
-    padding-bottom: 1rem;
+  padding-bottom: 1rem;
 
-    @media(min-width: 1210px){
-        min-height: 250px;
-    }
+  @media (min-width: 1210px) {
+    min-height: 250px;
+  }
 }
-.homepage__header_h1{
-    @include font-coolvetica;
-    position: relative;
+.homepage__header_h1 {
+  @include font-coolvetica;
+  position: relative;
 
-    font-size: 4rem;
-    font-weight: 400;
+  font-size: 4rem;
+  font-weight: 400;
 
-    text-transform: uppercase;
-    letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
 }
-.homepage__header_h1::before{
-    content: '';
-    width: 15px;
-    height: 45px;
-    position: absolute;
-    bottom: -17px;
-    left: -45px;
+.homepage__header_h1::before {
+  content: "";
+  width: 15px;
+  height: 45px;
+  position: absolute;
+  bottom: -17px;
+  left: -45px;
 
-    background-repeat: no-repeat;
-    background-image: url('../../../assets/images/homepage-header-decoration.png');
+  background-repeat: no-repeat;
+  background-image: url("../../../assets/images/homepage-header-decoration.png");
 }
 
-.homepage__about{
-    @include font-coolvetica;
+.homepage__about {
+  @include font-coolvetica;
 
-    padding: 2rem;
+  padding: 2rem;
 
-    text-align: center;
-    line-height: 1.3em;
+  text-align: center;
+  line-height: 1.3em;
 
-    background-position: bottom center;
-    background-size: cover;
-    background-image: url('../../../assets/images/bg-homepage-about.png');
+  background-position: bottom center;
+  background-size: cover;
+  background-image: url("../../../assets/images/bg-homepage-about.png");
 
-    @media(min-width: 825px) {
-        padding: 2.5rem 8rem;
-    }
+  @media (min-width: 825px) {
+    padding: 2.5rem 8rem;
+  }
 
-    @media(min-width: 1210px){
-        padding: 5rem 18rem;
-    }
+  @media (min-width: 1210px) {
+    padding: 5rem 18rem;
+  }
 }

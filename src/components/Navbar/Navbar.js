@@ -1,22 +1,17 @@
 "use client";
 
 //styles
-import styles from './navbar.module.scss';
+import styles from "./navbar.module.scss";
 
 //images
 import logo from "../../assets/images/logo.png";
-import { faArtstation } from "@fortawesome/free-brands-svg-icons";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 //components
 import Image from "next/image";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import SocialLinks from '../SocialLinks/SocialLinks';
+import SocialLinks from "../SocialLinks/SocialLinks";
 
 export function Navbar() {
-
   return (
     <nav className={styles.navbar}>
       <Link href="/" className={styles.navbar__logo}>
@@ -26,8 +21,8 @@ export function Navbar() {
 
       <ul className={styles.navbar__list}>
         <li>
-          <Link href="/portfolio" className={styles.navbar__list_link}>
-            Portfolio
+          <Link href="/artworks" className={styles.navbar__list_link}>
+            Artworks
           </Link>
         </li>
 
@@ -36,7 +31,6 @@ export function Navbar() {
             Contact
           </Link>
         </li>
-
 
         <SocialLinks />
       </ul>
