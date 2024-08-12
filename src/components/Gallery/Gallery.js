@@ -39,13 +39,13 @@ import GalleryItem from "@/components/GalleryItem/GalleryItem";
 import Overlay from "@/components/Overlay/Overlay";
 
 const Gallery = () => {
-  const [overlayImages, setOverlayImages] = useState([]);
+  const [overlayImage, setOverlayImage] = useState(false);
 
-  function showOverlay(images) {
-    setOverlayImages([...images]);
+  function showOverlay(image) {
+    setOverlayImage(image);
   }
   function hideOverlay() {
-    setOverlayImages([]);
+    setOverlayImage(false);
   }
 
   return (
@@ -63,7 +63,12 @@ const Gallery = () => {
         <GalleryItem image={final} size={2} action={showOverlay} />
 
         <GalleryItem image={interior} size={2} action={showOverlay} />
-        <GalleryItem image={jadziaFinal} size={1} action={showOverlay} />
+        <GalleryItem
+          image={jadziaFinal}
+          size={1}
+          action={showOverlay}
+          contain
+        />
         <GalleryItem image={kozaczek} size={2} action={showOverlay} />
         <GalleryItem image={lesGo} size={1} action={showOverlay} />
 
@@ -94,7 +99,7 @@ const Gallery = () => {
         <GalleryItem image={bagnoType} size={1} action={showOverlay} />
         <GalleryItem image={choinka} size={1} action={showOverlay} />
       </div>
-      <Overlay images={overlayImages} hide={hideOverlay} />
+      <Overlay image={overlayImage} hide={hideOverlay} />
     </div>
   );
 };

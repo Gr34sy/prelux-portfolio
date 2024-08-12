@@ -5,9 +5,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
-const Overlay = ({ images, hide }) => {
-  console.log(images[0]);
-
+const Overlay = ({ image, hide }) => {
   function handleHide() {
     if (typeof hide === "function") {
       hide();
@@ -16,7 +14,7 @@ const Overlay = ({ images, hide }) => {
 
   return (
     <>
-      {images != false && (
+      {image && (
         <div className={styles.overlay}>
           <FontAwesomeIcon
             icon={faXmark}
@@ -25,12 +23,19 @@ const Overlay = ({ images, hide }) => {
           />
           <div
             className={`${styles.container} ${
-              images[0].height > images[0].width
+              image.height > image.width
                 ? styles["container-vertical"]
                 : styles["container-horizontal"]
             }`}
           >
-            <Image src={images[0]} alt="Image" fill />
+            <Image
+              src={image.src}
+              alt="Image"
+              fill
+              style={{
+                objectFit: image.height >= image.width ? "contain" : "cover",
+              }}
+            />
           </div>
         </div>
       )}

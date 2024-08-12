@@ -3,10 +3,10 @@ import React from "react";
 import styles from "./gallery-item.module.scss";
 import Image from "next/image";
 
-const GalleryItem = ({ image, images, size, action }) => {
+const GalleryItem = ({ image, images, size, action, contain }) => {
   function handleClick() {
     if (typeof action === "function") {
-      action([image]);
+      action({ ...image, contain: contain || false });
     }
   }
 
